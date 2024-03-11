@@ -26,7 +26,7 @@ pyautogui.write("yanaraujo@gamail.com")
 pyautogui.press("tab")
 pyautogui.write("kkkkkkkkkkkkkkkkkkkkkkk")
 
-#clicar no botão de logar
+# clicar no botão de logar
 pyautogui.click(x=916, y=561)
 time.sleep(2)
 
@@ -36,47 +36,47 @@ tabela = pandas.read_csv("produtos.csv")
 
 for linha in tabela.index:
 
-    #cadastro de produto
+    # cadastro de produto
     pyautogui.click(x=656, y=277)
     
-    #codigo do produto
+    # codigo do produto
     codigo = tabela.loc[linha, "codigo"]
     pyautogui.write(codigo)
     pyautogui.press("tab")
     
-    #marca
+    # marca
     marca = tabela.loc[linha, "marca"]
     pyautogui.write(marca)
     pyautogui.press("tab")
     
-    #tipo
+    # tipo
     tipo = tabela.loc[linha, "tipo"]
     pyautogui.write(tipo)
     pyautogui.press("tab")
     
     
-    #categoria
+    # categoria
     categoria = (str(tabela.loc[linha, "categoria"]))
     pyautogui.write(categoria)
     pyautogui.press("tab")
     
-    #preço
+    # preço
     preco = (str(tabela.loc[linha, "preco_unitario"]))
     pyautogui.write(preco)
     pyautogui.press("tab")
     
-    #custo
+    # custo
     custo = (str(tabela.loc[linha, "custo"]))
     pyautogui.write(custo)
     pyautogui.press("tab")
     
-    #obs
+    # obs
     obs = tabela.loc[linha, "obs"]
     if not pandas.isna(obs):
         pyautogui.write(obs)
     pyautogui.press("tab")
 
-    #enviar
+    # enviar
 
     pyautogui.press("enter")
     pyautogui.scroll(5000)
